@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Fredoka&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+<audio id="clickSound" src="\sounds\mixkit-retro-game-notification-212.wav" preload="auto"></audio>
+ <div class="box" >
+    <form action="/submit" method="post"class="mb=2">
+    <h2>
+    Total Score:
+    <%=locals.totalScore? totalScore: "0"%>
+    </h2>
+     
+    <img class="mb-4" src="<%=question.filename%>" >
+
+    <div >
+    <input type="text" name="answer" class="form-control" id="userInput" placeholder="Type your answer here..."autofocus autocomplete="off">
+    </div> 
+    <button class="btn btn-primary w-100 py-2 mt-3" onclick="playSoundAndSubmit(event)" type="submit">Submit
+    <% if(locals.wasCorrect){ %>
+        <span class="checkmark">✔</span>
+        <% } else if (locals.wasCorrect===false) { %>
+          <span class="cross" id="error">✖</span>
+          <% } %>
+    </button> 
+   </form>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+   </script>
+   <script>
+  function playSoundAndSubmit(event) {
+  event.preventDefault(); // Prevent immediate form submission
+  document.getElementById("clickSound").play();
+  setTimeout(() => {
+    event.target.form.submit(); // Submit the form after sound
+  }, 500); // Adjust delay to match sound length
+}
+   </script>
+</html>

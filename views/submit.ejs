@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Fredoka&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <audio id="clickSound" src="\sounds\mixkit-wrong-answer-fail-notification-946.wav"></audio>
+   <div class="box">
+   <h2>Opps! The answer was "<%=question.logoname%>".</h2>
+    <h2>But, You did your Best!</h2>
+    <h3>Here is your final Score :<%=totalScore%></h3>
+    <img src="https://i.pinimg.com/originals/6d/dc/25/6ddc2529264eb4720ec6cfd33f0f3bd4.gif">
+    <h2>Wanna play again?</h2>
+    <button onclick="window.location.href='/'" class="restart-btn "> Restart Quiz</button>
+    </div>
+   </body> 
+   <script>
+     window.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('clickSound').play();
+  });
+</script>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LogoGo - Quiz App</title>
+   <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Fredoka&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #1F618D, #48C9B0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      background-image: url("https://i.pinimg.com/736x/cc/2a/ef/cc2aefa1c4c5954030068c3e57bb46df.jpg"); /* or an online link */
+      background-size: cover;         /* Stretch to cover entire screen */
+      background-position: center;    /* Center it */
+      background-repeat: no-repeat; 
+    }
+
+    .container {
+      padding: 40px;
+    }
+
+h1 {
+  font-family: 'Chewy', cursive;
+  font-size: 10rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #F7DC6F;
+  text-shadow:
+    -2px -2px 0 #1F618D,
+     2px -2px 0 #1F618D,
+    -2px  2px 0 #1F618D,
+     2px  2px 0 #1F618D;
+  letter-spacing: 0.1em;
+}
+
+
+p {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.6vw;
+  color: #1F618D;
+  background: rgba(255,255,255,0.6);
+  border-radius: 12px;
+  padding: 14px 22px;
+  margin-bottom: 32px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 2px 8px #F7DC6F;
+}
+
+
+    button {
+      font-size: 1.2vw;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 50px;
+      background-color: #F7DC6F;
+      color: #1C2833;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px #1F618D;
+    }
+
+    button:hover {
+      background-color: #F1C40F;
+      transform: scale(1.05);
+    }
+
+    @media(max-width: 768px) {
+      h1 {
+        font-size: 8vw;
+      }
+
+      p {
+        font-size: 3.5vw;
+      }
+
+      button {
+        font-size: 4vw;
+        padding: 12px 30px;
+      }
+    }
+
+    @media(max-width: 400px) {
+      h1 {
+        font-size: 10vw;
+      }
+
+      p {
+        font-size: 4vw;
+      }
+
+      button {
+        font-size: 4.5vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Logo-Go</h1>
+    <p>Test your skills and challenge your friends,</br>Guess the logo and win the game!</p>
+    <button onclick="window.location.href='/welcome'">Play Now</button>
+  </div>
+<script src="index.js"></script>
+</body>
+</html>
